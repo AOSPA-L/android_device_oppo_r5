@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/oppo/r7plus
+LOCAL_PATH := device/oppo/r5
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-$(call inherit-product-if-exists, vendor/oppo/r7plus/r7plus-vendor.mk)
+$(call inherit-product-if-exists, vendor/oppo/r5/r5-vendor.mk)
 
 # Inherit from msm8939-common
 $(call inherit-product, device/oppo/msm8939-common/msm8939.mk)
@@ -55,12 +55,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdbdata/QRD/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
     $(LOCAL_PATH)/audio/acdbdata/QRD/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     $(LOCAL_PATH)/audio/acdbdata/QRD/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
-
-# Fingerprint sensor
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/cyanogenmod.hardware.fingerprint.xml:system/etc/permissions/cyanogenmod.hardware.fingerprint.xml
-PRODUCT_PACKAGES += \
-    fingerprint.msm8916
 
 # Input configuration
 PRODUCT_COPY_FILES += \
